@@ -1,10 +1,15 @@
 #include <SFML/Graphics.hpp>
+#include "Mreza.h"
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(800, 600), "Hello, SFML world!");
+	sf::RenderWindow window(sf::VideoMode(800, 800), "Hello, SFML world!");
 	window.setFramerateLimit(60);
-	//Cvijet cvijet(&window);
+	Mreza mreza(&window);
+
+	mreza.inicijaliziraj();
+	window.display();
+	sf::sleep(sf::seconds(2));
 
 	while (window.isOpen())
 	{
@@ -14,10 +19,11 @@ int main()
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
-
+		
 		window.clear();
-		//cvijet.draw();
+		mreza.draw();
 		window.display();
+		sf::sleep(sf::seconds(2));
 	}
 
 	return 0;
