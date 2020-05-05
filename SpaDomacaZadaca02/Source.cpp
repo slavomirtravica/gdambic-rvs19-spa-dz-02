@@ -3,7 +3,7 @@
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(800, 800), "Hello, SFML world!");
+	sf::RenderWindow window(sf::VideoMode(800, 800), "Game of Life");
 	window.setFramerateLimit(60);
 	Mreza mreza(&window);
 
